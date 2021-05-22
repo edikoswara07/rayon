@@ -4,18 +4,18 @@
       <div class="flex flex-col md:flex-row py-4 space-y-4 md:space-y-0">
         <div class="flex justify-between items-center md:pr-12">
           <div>
-            <span class="text-2xl font-bold text-coolgray-900">Rayon</span>
+            <span class="text-2xl font-bold text-lightblue-900">Rayon</span>
           </div>
           <div>
             <button
-              class="block md:hidden"
+              class="block md:hidden text-lightblue-500"
               @click="toggleNav"
               :class="[isOpen ? 'block' : 'hidden']"
             >
               <vue-feather type="align-right"></vue-feather>
             </button>
             <button
-              class="block md:hidden"
+              class="block md:hidden text-lightblue-500"
               @click="toggleNav"
               :class="[isOpen ? 'hidden' : 'block']"
             >
@@ -25,35 +25,35 @@
         </div>
         <!-- Navigasi -->
         <div
-          class="flex flex-col md:flex-row w-full justify-between md:items-center space-y-4 md:space-y-0"
+          class="md:flex flex-col md:flex-row w-full justify-between md:items-center space-y-4 md:space-y-0"
           :class="[isOpen ? 'hidden' : 'block']"
         >
           <div
             class="flex flex-col md:flex-row space-x-0 md:space-x-4 space-y-3 md:space-y-0"
           >
-            <div class="text-sm font-semibold text-coolgray-700">
+            <div class="text-sm font-semibold text-lightblue-700">
               <router-link to="/">
                 Home
               </router-link>
             </div>
-            <div class="text-sm font-semibold text-coolgray-700">
+            <div class="text-sm font-semibold text-lightblue-700">
               <router-link to="/">
-                Tentang Kami
+                About
               </router-link>
             </div>
-            <div class="text-sm font-semibold text-coolgray-700">
+            <div class="text-sm font-semibold text-lightblue-700">
               <router-link to="/">
-                Agenda Program
+                Agenda
               </router-link>
             </div>
-            <div class="text-sm font-semibold text-coolgray-700">
+            <div class="text-sm font-semibold text-lightblue-700">
               <router-link to="/">
                 Jurnal
               </router-link>
             </div>
-            <div class="text-sm font-semibold text-coolgray-700">
+            <div class="text-sm font-semibold text-lightblue-700">
               <router-link to="/">
-                Hubungi Kami
+                Contact
               </router-link>
             </div>
           </div>
@@ -96,7 +96,6 @@ export default {
   methods: {
     toggleNav() {
       this.isOpen = !this.isOpen;
-      console.log(this.isOpen);
     },
   },
 };
